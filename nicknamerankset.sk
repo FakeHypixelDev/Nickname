@@ -1,0 +1,12 @@
+command /nick [<string>] [<string>]:
+    permission: electro.nick
+    permission message: &8&l((&e&lElectro &b&lPermissions&8&l)) &eYou dont have permission to do this!
+    trigger:
+        if arg 1 is not set:
+            if {electro.nick.%player%) is set:
+                send "&8&l((&eElectro&b&lNick&8&l)) You are no longer nicked!"
+                execute console command "/ud %player%"
+                set player tab name to "%player%"
+            else:
+                
+        
